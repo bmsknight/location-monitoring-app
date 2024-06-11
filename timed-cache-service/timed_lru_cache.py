@@ -5,9 +5,9 @@ https://realpython.com/lru-cache-python/
 https://www.geeksforgeeks.org/lru-cache-in-python-using-ordereddict/
 """
 
+import datetime
 from collections import OrderedDict
 from typing import Union, List
-import datetime
 
 
 class TimedLRUCache:
@@ -39,7 +39,7 @@ class TimedLRUCache:
                 self.cache.move_to_end(key)
                 return self.cache[key][0]
 
-    def __setitem__(self, key: int, value: Union[List,dict]) -> None:
+    def __setitem__(self, key: int, value: Union[List, dict]) -> None:
         """
         Saves a new value into the cache
         :param key: the key of the entry
